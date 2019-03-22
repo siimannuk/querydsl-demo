@@ -20,10 +20,10 @@ public abstract class AbstractEntityService<T> {
     private final EntityRepository<T> repository;
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager entityManager;
 
-    protected AbstractEntityService(EntityRepository<T> r) {
-        this.repository = r;
+    protected AbstractEntityService(EntityRepository<T> repo) {
+        this.repository = repo;
     }
 
     public Page<T> findAll(Predicate predicate, Pageable pageable) {
@@ -47,14 +47,14 @@ public abstract class AbstractEntityService<T> {
     }
 
     public JPAUpdateClause update(EntityPath<?> entity) {
-        return new JPAUpdateClause(this.em, entity);
+        return new JPAUpdateClause(this.entityManager, entity);
     }
 
     public JPADeleteClause delete(EntityPath<?> entity) {
-        return new JPADeleteClause(this.em, entity);
+        return new JPADeleteClause(this.entityManager, entity);
     }
 
     public JPAQuery<T> query() {
-        return new JPAQuery<>(this.em);
+        return new JPAQuery<>(this.entityManager);
     }
 }
