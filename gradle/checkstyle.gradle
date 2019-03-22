@@ -1,0 +1,26 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+  toolVersion = "7.0"
+  configFile = file("$gradleConfigDir/checkstyle.xml")
+  configDir = file("$gradleConfigDir")
+  ignoreFailures = false
+  showViolations = true
+}
+
+checkstyleMain {
+  source = "src/main/java"
+  classpath += configurations.compile
+}
+
+task checkstyleHtml {
+  doLast {
+    if (checkstyleMain.reports.xml.destination.exists()) {
+      ant.xslt(in: checkstyleMain.reports.xml.destination,
+        style: file("$gradleConfigDir/checkstyle-noframes-sorted.xsl"),
+        out: new File(checkstyleMain.reports.xml.destination.parent, "main.html"))
+    }
+  }
+}
+
+checkstyleMain.finalizedBy checkstyleHtml

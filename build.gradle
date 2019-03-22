@@ -1,0 +1,37 @@
+def javaProjects() {
+  return subprojects.findAll {
+    new File(it.projectDir, "src/main/java").exists()
+  }
+}
+
+ext.gradleConfigDir = "$rootDir/gradle/config/"
+
+configure(javaProjects()) {
+  apply plugin: 'java'
+  apply plugin: 'idea'
+
+  apply from: "$rootDir/dependencies.gradle"
+  apply from: "$rootDir/gradle/checkstyle.gradle"
+  apply from: "$rootDir/gradle/pmd.gradle"
+
+  group = 'com.siimannuk.querydsldemo'
+  version = '1.0'
+
+  tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+  }
+
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    annotationProcessor libraries.lombok
+    compileOnly libraries.lombok
+
+    testAnnotationProcessor libraries.lombok
+    testCompileOnly libraries.lombok
+  }
+}

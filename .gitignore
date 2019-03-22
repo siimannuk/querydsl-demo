@@ -1,0 +1,16 @@
+.idea
+.classpath
+.project
+.settings
+.checkstyle
+.gradle
+.gradle_home
+*/.settings/*
+**/build/**
+**/out/**
+**/generated-sources/**
+*/bin
+**/*.iml
+*.log
+**/logs
+

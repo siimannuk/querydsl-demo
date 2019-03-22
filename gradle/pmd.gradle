@@ -1,0 +1,21 @@
+apply plugin: 'pmd'
+
+pmd {
+  toolVersion = "5.5.2"
+  ignoreFailures = false
+  consoleOutput = true
+  sourceSets = []
+  ruleSetFiles = files("$gradleConfigDir/pmd-ruleset.xml")
+}
+
+pmdMain {
+  source = "src/main/java"
+}
+
+task pmd(type: Pmd) {
+  ignoreFailures = false
+  reports {
+    xml.enabled = false
+    html.enabled = true
+  }
+}

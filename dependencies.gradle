@@ -1,0 +1,31 @@
+ext.spring_boot_version = "2.1.2.RELEASE"
+ext.spring_version = "5.1.4.RELEASE"
+ext.libraries = [
+  spring: [
+    boot_starter_web: "org.springframework.boot:spring-boot-starter-web:$spring_boot_version",
+    boot_starter_jpa: "org.springframework.boot:spring-boot-starter-data-jpa:$spring_boot_version",
+    boot_starter_json: "org.springframework.boot:spring-boot-starter-json:$spring_boot_version",
+    boot_starter_jetty: "org.springframework.boot:spring-boot-starter-jetty:$spring_boot_version",
+    boot_starter: "org.springframework.boot:spring-boot-starter:$spring_boot_version",
+    boot_test: "org.springframework.boot:spring-boot-starter-test:$spring_boot_version",
+  ],
+  hibernate: [
+    'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final',
+    'org.hibernate:hibernate-core:5.4.1.Final',
+    'org.hibernate:hibernate-validator:6.0.14.Final',
+    'javax.el:javax.el-api:3.0.0',
+    'org.glassfish.web:javax.el:2.2.6'
+  ],
+  querydsl: [
+    jpa: 'com.querydsl:querydsl-jpa:4.1.4',
+    apt: 'com.querydsl:querydsl-apt:4.1.4'
+  ],
+  commons: [
+    io:  'commons-io:commons-io:2.6'
+  ],
+  postgresql: 'org.postgresql:postgresql:9.4.1209',
+  p6spy: 'p6spy:p6spy:3.8.1',
+  h2: 'com.h2database:h2:1.4.197',
+  liquibase: 'org.liquibase:liquibase-core:3.6.2',
+  lombok: 'org.projectlombok:lombok:1.18.4'
+]
