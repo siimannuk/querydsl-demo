@@ -1,5 +1,6 @@
 package com.siimannuk.querydsldemo.model.superhero;
 
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,9 @@ public class SuperheroService extends AbstractEntityService<Superhero> {
             .execute();
     }
 
-
+    public long deleteWhere(Predicate predicate) {
+        return delete(superhero).where(predicate).execute();
+    }
 
 
 

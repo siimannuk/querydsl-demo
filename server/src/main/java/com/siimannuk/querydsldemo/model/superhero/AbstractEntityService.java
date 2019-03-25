@@ -46,15 +46,15 @@ public abstract class AbstractEntityService<T> {
         return repository().find(predicate);
     }
 
-    public JPAUpdateClause update(EntityPath<?> entity) {
+    protected JPAUpdateClause update(EntityPath<?> entity) {
         return new JPAUpdateClause(this.entityManager, entity);
     }
 
-    public JPADeleteClause delete(EntityPath<?> entity) {
+    protected JPADeleteClause delete(EntityPath<?> entity) {
         return new JPADeleteClause(this.entityManager, entity);
     }
 
-    public JPAQuery<T> query() {
+    protected JPAQuery<T> query() {
         return new JPAQuery<>(this.entityManager);
     }
 }

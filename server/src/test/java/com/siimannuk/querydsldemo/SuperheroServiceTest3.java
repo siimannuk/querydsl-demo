@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import static com.siimannuk.querydsldemo.model.superhero.QSuperhero.superhero;
+
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -17,6 +19,15 @@ public class SuperheroServiceTest3 extends AbstractTests {
     public void updateName() {
         log.info(
             Long.toString(this.superheroes.updateName(96L, "Black Knight IIIX"))
+        );
+    }
+
+    @Test
+    public void delete() {
+        log.info(
+            Long.toString(
+                this.superheroes.deleteWhere(superhero.name.eq("xxx"))
+            )
         );
     }
 }

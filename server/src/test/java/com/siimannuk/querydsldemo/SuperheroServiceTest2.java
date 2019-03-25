@@ -1,7 +1,6 @@
 package com.siimannuk.querydsldemo;
 
 import com.querydsl.core.types.Predicate;
-import com.siimannuk.querydsldemo.model.superhero.SuperheroService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,7 +34,7 @@ public class SuperheroServiceTest2 extends AbstractTests {
 
     @Test
     public void findAllBySuperpowers() {
-        Predicate pred = SuperheroService.hasPowers(
+        Predicate pred = hasPowers(
             "Super Speed", "Fire Resistance", "Plant Control"
         );
 
