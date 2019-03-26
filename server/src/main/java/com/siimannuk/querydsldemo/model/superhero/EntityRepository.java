@@ -11,10 +11,6 @@ interface EntityRepository<T>
         extends JpaRepository<T, Long>,
                 QuerydslPredicateExecutor<T> {
 
-    default Optional<T> find(Long id) {
-        return Optional.ofNullable(getOne(id));
-    }
-
     default Optional<T> find(Predicate predicate) {
         return findOne(predicate);
     }
