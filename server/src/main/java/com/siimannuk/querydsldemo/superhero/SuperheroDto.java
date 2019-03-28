@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import java.util.HashSet;
 import java.util.Set;

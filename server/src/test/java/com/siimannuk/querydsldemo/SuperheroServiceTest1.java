@@ -12,8 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import static com.siimannuk.querydsldemo.Util.print;
-import static com.siimannuk.querydsldemo.model.superhero.QPublisher.publisher;
-import static com.siimannuk.querydsldemo.model.superhero.QSuperhero.superhero;
+import static com.siimannuk.querydsldemo.superhero.QPublisher.publisher;
+import static com.siimannuk.querydsldemo.superhero.QSuperhero.superhero;
 
 @Slf4j
 @RunWith(SpringRunner.class)

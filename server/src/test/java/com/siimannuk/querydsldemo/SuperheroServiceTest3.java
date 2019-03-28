@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.siimannuk.querydsldemo.model.superhero.QSuperhero.superhero;
+import static com.siimannuk.querydsldemo.superhero.QSuperhero.superhero;
 
 @Slf4j
 @RunWith(SpringRunner.class)

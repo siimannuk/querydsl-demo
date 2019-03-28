@@ -1,7 +1,3 @@
-plugins {
-  id 'org.springframework.boot' version '2.1.2.RELEASE'
-}
-
 sourceSets {
   main {
     java {
@@ -33,29 +29,24 @@ dependencies {
   implementation (
     libraries.spring.boot_starter_jpa,
     libraries.spring.boot_starter_json,
-    libraries.spring.boot_starter,
     libraries.hibernate,
     libraries.postgresql,
-    libraries.querydsl.jpa,
-    libraries.commons.io,
-    libraries.p6spy
+    libraries.querydsl.jpa, // adds Querydsl support
+    libraries.commons.io
   )
 
   annotationProcessor (
-    "${libraries.querydsl.apt}:jpa", // generates QueryDSL classes
-    libraries.hibernate,
-    libraries.lombok
+    "${libraries.querydsl.apt}:jpa", // generates Querydsl classes
+    libraries.hibernate
   )
 
   testImplementation (
     libraries.spring.boot_test,
-    libraries.postgresql,
     libraries.p6spy
   )
 }
 
 compileJava {
-  options.annotationProcessorPath = configurations.annotationProcessor
   options.annotationProcessorGeneratedSourcesDirectory = sourceSets.generated.java.srcDirs[0]
 }
 
@@ -65,10 +56,4 @@ compileGeneratedJava {
 
 clean {
   delete sourceSets.generated.java.srcDirs[0]
-}
-
-def mainClass = 'com.siimannuk.querydsldemo.ServerMain'
-task runQueryDslDemo(type: JavaExec) {
-  main = mainClass
-  classpath = sourceSets.main.runtimeClasspath
 }

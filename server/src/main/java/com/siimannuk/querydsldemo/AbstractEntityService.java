@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +43,7 @@ public abstract class AbstractEntityService<T> {
     }
 
     public Optional<T> find(Predicate predicate) {
-        return repository().find(predicate);
+        return repository().findOne(predicate);
     }
 
     protected JPAUpdateClause update(EntityPath<?> entity) {

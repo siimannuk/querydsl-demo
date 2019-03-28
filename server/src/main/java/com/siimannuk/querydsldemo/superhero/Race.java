@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,8 +9,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "publisher")
-public class Publisher {
+@Table(name = "race")
+public class Race {
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)

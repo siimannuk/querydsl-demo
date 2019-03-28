@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QRace extends EntityPathBase<Race> {
 
-    private static final long serialVersionUID = 1447799143L;
+    private static final long serialVersionUID = -1856287230L;
 
     public static final QRace race = new QRace("race");
 

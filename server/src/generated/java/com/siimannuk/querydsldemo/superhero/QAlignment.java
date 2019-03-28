@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QAlignment extends EntityPathBase<Alignment> {
 
-    private static final long serialVersionUID = -661982963L;
+    private static final long serialVersionUID = 304149842L;
 
     public static final QAlignment alignment = new QAlignment("alignment");
 

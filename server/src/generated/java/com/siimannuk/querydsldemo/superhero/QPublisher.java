@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QPublisher extends EntityPathBase<Publisher> {
 
-    private static final long serialVersionUID = -982453978L;
+    private static final long serialVersionUID = -16321173L;
 
     public static final QPublisher publisher = new QPublisher("publisher");
 

@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QSuperpower extends EntityPathBase<Superpower> {
 
-    private static final long serialVersionUID = 281224320L;
+    private static final long serialVersionUID = 166570203L;
 
     public static final QSuperpower superpower = new QSuperpower("superpower");
 

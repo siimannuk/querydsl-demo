@@ -1,12 +1,13 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
+import com.siimannuk.querydsldemo.AbstractEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.siimannuk.querydsldemo.model.superhero.QSuperhero.superhero;
+import static com.siimannuk.querydsldemo.superhero.QSuperhero.superhero;
 
 @Service
 @Transactional

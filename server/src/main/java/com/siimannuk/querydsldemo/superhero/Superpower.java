@@ -1,4 +1,4 @@
-package com.siimannuk.querydsldemo.model.superhero;
+package com.siimannuk.querydsldemo.superhero;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,8 +9,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "alignment")
-public class Alignment {
+@Table(name = "superpower")
+public class Superpower {
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
